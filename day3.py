@@ -59,3 +59,35 @@ if __name__ == "__main__":
 
 
 
+# overiding
+class Vehicle:
+    def move(self):
+        print("vehicle is moving")
+
+class Car(Vehicle):
+    def move(self):
+        super().move()
+        print("car is moving")
+
+if __name__ == "__main__":
+    v = Car()
+    v.move()
+    print(v)
+
+
+# multiple inheritance
+class Writer:
+    def write(self):
+        print("writing content")
+
+class Speaker:
+    def speak(self):
+        print("speaking")
+
+class Contentcreator(Writer,Speaker):
+    pass
+
+if __name__ == "__main__":
+    p = Contentcreator()
+    p.speak()
+    p.write()
